@@ -3,6 +3,14 @@ const authController = require('../controllers/authController');
 const { register, login } = authController;
 const router = express.Router();
 
+exports.register = (req, res) => {
+    res.send("Register endpoint");
+};
+
+exports.login = (req, res) => {
+    res.send("Login endpoint");
+};
+
 router.post("/register", register);
 router.post("/login", login);
 
